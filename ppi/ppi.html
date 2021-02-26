@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>PPI 计算器</title>
+</head>
+
+<body>
+
+  <main style="text-align: center;">
+
+    <label>宽度（px）</label>
+    <input id='width' value='1920' onkeyup="calppi()" required>
+
+    <br>
+    <label>高度（px）</label>
+    <input id='height' value='1080' onkeyup="calppi()" required>
+
+    <br>
+    <label>尺寸（inch）</label>
+    <input id='inch' value='23' onkeyup="calppi()" required>
+
+    <br>
+    <label>PPI</label>
+    <input id='ppi' disabled>
+  </main>
+
+
+  <script type='text/javascript'>
+    // 计算ppi
+    function calppi() {
+      var width = document.getElementById("width").value;
+      var height = document.getElementById("height").value;
+      var inch = document.getElementById("inch").value;
+      var ppi = Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2)) / inch
+      console.log(width, height, inch, ppi);
+
+      document.getElementById("ppi").value = ppi;
+    }
+  </script>
+</body>
+
+</html>
