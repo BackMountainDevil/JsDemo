@@ -6,7 +6,7 @@
 
 ## 目录 
 
-[PPI 计算器](./ppi/ppi.html)
+[PPI 计算器](./ppi/README.md)
 
 
 ## 使用说明
