@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>BMI 计算器</title>
+</head>
+
+<body>
+
+  <main style="text-align: center;">
+    <div>
+        <label>身高（cm）</label>
+        <input id='height' value='170' onkeyup="calbmi()" required>
+        <br>
+        <label>体重（kg）</label>
+        <input id='weight' value='65' onkeyup="calbmi()" required>
+        <br>
+        <label>BMI</label>
+        <input id='res' disabled>
+    </div>
+  </main>
+
+
+  <script type='text/javascript'>
+    // 计算 BMI
+    function calbmi() {
+        var height = document.getElementById("height").value / 100;
+        var weight = document.getElementById("weight").value;
+        var bmi = weight / Math.pow(height, 2);
+        console.log(bmi);
+        document.getElementById("res").value = bmi.toFixed(1);
+    }
+    calbmi()
+  </script>
+</body>
+
+</html>

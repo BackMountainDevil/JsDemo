@@ -8,6 +8,7 @@
 
 [PPI 计算器](./ppi/README.md)
 
+[BMI 计算器](./bmi/bmi.html)，实际效果可看[这里](https://anidea.gitee.io/post/jsdemobmi/)
 
 ## 使用说明
 
